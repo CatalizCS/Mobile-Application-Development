@@ -27,6 +27,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
             if (usernameStr.equals("admin") && passwordStr.equals("admin")) {
                 Toast.makeText(this, "You clicked Login button that proof your username and password corrected!!", Toast.LENGTH_SHORT).show();
+                startActivity(new android.content.Intent(this, UsersActivity.class));
             } else {
                 Toast.makeText(this, "Username and password are incorrect or empty!!", Toast.LENGTH_SHORT).show();
             }

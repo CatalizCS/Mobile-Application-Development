@@ -5,12 +5,12 @@
 
 	<TableRow>
 		<TextView
-			android:layout_column="1"
+			android:layout_column="0"
 			android:padding="8dp"
 			android:text="Họ và tên"
 			android:textStyle="bold"/>
 		<TextView
-			android:layout_column="2"
+			android:layout_column="1"
 			android:padding="8dp"
 			android:text="Tuổi"
 			android:textStyle="bold"/>
@@ -45,5 +45,11 @@
 			android:padding="8dp"
 			android:text="30"/>
 	</TableRow>
+
+	<Button
+		android:id="@+id/btn_exit"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Exit"/>
 
 </TableLayout>
