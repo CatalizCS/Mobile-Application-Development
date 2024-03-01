@@ -1,6 +1,7 @@
 package com.tama.android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -45,5 +46,23 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             // Start SignupActivity
             startActivity(new android.content.Intent(this, SignupActivity.class));
         }
+    }
+
+    public void TestAlertDialog(View view) {
+        android.app.AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes", new android.content.DialogInterface.OnClickListener() {
+            public void onClick(android.content.DialogInterface dialog, int id) {
+                LoginActivity.this.finish();
+            }
+        });
+        builder.setNegativeButton("No", new android.content.DialogInterface.OnClickListener() {
+            public void onClick(android.content.DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 }
