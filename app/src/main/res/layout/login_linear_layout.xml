@@ -56,10 +56,18 @@
 		android:layout_alignParentBottom="true"/>
 
 	<Button
+		android:id="@+id/Calculator"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:onClick="TestCalculator"
 		android:text="Test Calculator"
 		android:layout_above="@id/AlertDialog"/>
 
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestTempConvert"
+		android:text="Test Temp Convert"
+		android:layout_above="@id/Calculator"
+		/>
 </RelativeLayout>

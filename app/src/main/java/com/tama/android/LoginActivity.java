@@ -69,4 +69,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void TestCalculator(View view) {
         startActivity(new android.content.Intent(this, CalculatorActivity.class));
     }
+
+    public void TestTempConvert(View view) {
+        startActivity(new android.content.Intent(this, TempConvertActivity.class));
+    }
 }

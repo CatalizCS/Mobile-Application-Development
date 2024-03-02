@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".TempConvertActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="16dp"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="-107dp">
+
+		<TextView
+			android:id="@+id/FahrenheitTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Fahrenheit"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+
+		<EditText
+			android:id="@+id/FahrenheitInput"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:maxLines="1"
+			android:inputType="text" />
+
+		<TextView
+			android:id="@+id/CelsiusTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Celsius"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+
+		<EditText
+			android:id="@+id/CelsiusInput"
+			android:layout_width="329dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:maxLines="1"
+			android:inputType="text" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btnFar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Convert to Celsius" />
+
+			<Button
+				android:id="@+id/btnCel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Convert to Fahrenheit" />
+		</LinearLayout>
+
+		<Button
+			android:id="@+id/btnClear"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Clear" />
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
