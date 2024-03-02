@@ -64,6 +64,7 @@
 		android:layout_above="@id/AlertDialog"/>
 
 	<Button
+		android:id="@+id/TempConvert"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:onClick="TestTempConvert"
@@ -71,10 +72,18 @@
 		android:layout_above="@id/Calculator"/>
 
 	<Button
+		android:id="@+id/LoginAlert"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:onClick="TestLoginAlert"
 		android:text="Test Login Alert"
-		android:layout_above="@id/Calculator"/>
+		android:layout_above="@id/TempConvert"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestLunarYearConvert"
+		android:text="Test Lunar Year Convert"
+		android:layout_above="@id/LoginAlert"/>
 
 </RelativeLayout>

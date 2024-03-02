@@ -77,4 +77,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void TestLoginAlert(View view) {
         startActivity(new android.content.Intent(this, LoginAlertActivity.class));
     }
+
+    public void TestLunarYearConvert(View view) {
+        startActivity(new android.content.Intent(this, LunarYearConvertActivity.class));
+    }
 }
