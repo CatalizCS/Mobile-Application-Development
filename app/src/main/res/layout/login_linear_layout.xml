@@ -80,10 +80,20 @@
 		android:layout_above="@id/TempConvert"/>
 
 	<Button
+		android:id="@+id/LunarYearConvert"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:onClick="TestLunarYearConvert"
 		android:text="Test Lunar Year Convert"
 		android:layout_above="@id/LoginAlert"/>
+
+	<Button
+		android:id="@+id/InfomationAdd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestInfomationAdd"
+		android:text="Test Infomation Add"
+		android:layout_above="@id/LunarYearConvert"/>
+
 
 </RelativeLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".InfomationAddActivity">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="16dp">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="#009688">
+
+			<TextView
+				android:id="@+id/textView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="Thông tin cá nhân"
+				android:textSize="24sp"
+				android:textStyle="bold" />
+
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/fullname"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingRight="10dp"
+				android:text="Họ và tên"
+				android:textSize="24sp" />
+
+			<EditText
+				android:id="@+id/fullnameInput"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:inputType="text"
+				android:padding="16dp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/IDUser"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingRight="10dp"
+				android:text="CMND/CCCD"
+				android:textSize="24sp" />
+
+			<EditText
+				android:id="@+id/IDUserInput"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:inputType="text"
+				android:padding="16dp" />
+		</LinearLayout>
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#1B92F1">
+
+			<TextView
+				android:id="@+id/textView3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="Bằng cấp"
+				android:textSize="24sp"
+				android:textStyle="bold" />
+
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<CheckBox
+				android:id="@+id/checkBox"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Trung cấp" />
+
+			<CheckBox
+				android:id="@+id/checkBox2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Cao đẳng" />
+
+			<CheckBox
+				android:id="@+id/checkBox3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Đại học" />
+		</LinearLayout>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#1B92F1">
+
+			<TextView
+				android:id="@+id/textView4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="Sở thích"
+				android:textSize="24sp"
+				android:textStyle="bold" />
+
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<CheckBox
+				android:id="@+id/checkBox4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Đọc báo" />
+
+			<CheckBox
+				android:id="@+id/checkBox5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Đọc sách" />
+
+			<CheckBox
+				android:id="@+id/checkBox6"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Đọc code" />
+		</LinearLayout>
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#1B92F1">
+
+			<TextView
+				android:id="@+id/textView2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="Thông tin bổ sung"
+				android:textSize="24sp"
+				android:textStyle="bold" />
+
+
+		</FrameLayout>
+
+		<EditText
+			android:id="@+id/addInfoInput"
+			android:layout_width="match_parent"
+			android:layout_height="183dp"
+			android:ems="10"
+			android:inputType="text" />
+
+		<Button
+			android:id="@+id/btnsubmit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Gửi thông tin" />
+
+	</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
