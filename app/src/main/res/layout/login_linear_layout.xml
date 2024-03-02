@@ -68,6 +68,13 @@
 		android:layout_height="wrap_content"
 		android:onClick="TestTempConvert"
 		android:text="Test Temp Convert"
-		android:layout_above="@id/Calculator"
-		/>
+		android:layout_above="@id/Calculator"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestLoginAlert"
+		android:text="Test Login Alert"
+		android:layout_above="@id/Calculator"/>
+
 </RelativeLayout>

@@ -73,4 +73,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void TestTempConvert(View view) {
         startActivity(new android.content.Intent(this, TempConvertActivity.class));
     }
+
+    public void TestLoginAlert(View view) {
+        startActivity(new android.content.Intent(this, LoginAlertActivity.class));
+    }
 }
