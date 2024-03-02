@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".CalculatorActivity">
+
+	<FrameLayout
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="30sp"
+		android:background="#008242">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="@null"
+			android:ems="10"
+			android:text="Các kiểu lập trình sự kiện"
+			android:textAlignment="center"
+			android:textSize="20sp"
+			android:textStyle="bold"/>
+	</FrameLayout>
+
+	<TextView
+		android:id="@+id/SoA"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/title"
+		android:textSize="15sp"
+		android:text="Số A: "
+		android:background="@drawable/draw_border"
+		android:padding="10sp"/>
+
+	<EditText
+		android:id="@+id/inputSoA"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="text"
+		android:layout_below="@+id/title"
+		android:layout_toRightOf="@+id/SoA"
+		android:background="@drawable/draw_border"
+		android:padding="10sp"
+		android:textSize="15sp"/>
+
+	<TextView
+		android:id="@+id/SoB"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/inputSoA"
+		android:textSize="15sp"
+		android:text="Số B: "
+		android:background="@drawable/draw_border"
+		android:padding="10sp"/>
+
+	<EditText
+		android:id="@+id/inputSoB"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="text"
+		android:layout_below="@+id/inputSoA"
+		android:layout_toEndOf="@+id/SoB"
+		android:background="@drawable/draw_border"
+		android:padding="10sp"
+		android:textSize="15sp"/>
+
+	<FrameLayout
+		android:id="@+id/result"
+		android:layout_width="match_parent"
+		android:layout_height="30sp"
+		android:layout_below="@+id/inputSoB"
+
+		android:background="#008242">
+
+		<TextView
+			android:id="@+id/resultText"
+			android:layout_width="75dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:background="@null"
+			android:ems="10"
+			android:text="Kết quả:"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/resultValue"
+			android:layout_width="335dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:background="@null"
+			android:text="0"
+			android:ems="10"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			tools:ignore="RtlHardcoded" />
+	</FrameLayout>
+
+	<Button
+		android:id="@+id/SumNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/result"
+		android:onClick="SumClick"
+		android:text="Tổng 2 số" />
+	<Button
+		android:id="@+id/DifferenceNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/SumNumber"
+		android:text="Hiệu 2 số" />
+	<Button
+		android:id="@+id/ProductNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/DifferenceNumber"
+		android:text="Tích 2 số" />
+	<Button
+		android:id="@+id/QuotientNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/ProductNumber"
+		android:text="Thương 2 số" />
+	<Button
+		android:id="@+id/DivisorNumber"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/QuotientNumber"
+		android:text="Ước số chung lớn nhất" />
+	<Button
+		android:id="@+id/exitButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/DivisorNumber"
+		android:text="Thoát khỏi chương trình" />
+</RelativeLayout>

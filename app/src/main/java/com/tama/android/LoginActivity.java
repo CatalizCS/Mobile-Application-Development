@@ -65,4 +65,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         android.app.AlertDialog alert = builder.create();
         alert.show();
     }
+
+    public void TestCalculator(View view) {
+        startActivity(new android.content.Intent(this, CalculatorActivity.class));
+    }
 }

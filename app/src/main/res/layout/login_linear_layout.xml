@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
-	android:padding="16dp"
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:context=".LoginActivity">
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Login"
-		android:textSize="24sp"
-		android:textStyle="bold" />
-
-	<EditText
-		android:id="@+id/username"
+	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="Username"
-		android:inputType="textEmailAddress"/>
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="16dp">
 
-	<EditText
-		android:id="@+id/password"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="Password"
-		android:inputType="textPassword"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Login"
+			android:textSize="24sp"
+			android:textStyle="bold" />
 
-	<Button
-		android:id="@+id/btn_login_submit"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="Login"/>
+		<EditText
+			android:id="@+id/username"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Username"
+			android:inputType="textEmailAddress"/>
 
-	<Button
-		android:id="@+id/btn_login_signup"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="Sign Up"/>
+		<EditText
+			android:id="@+id/password"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Password"
+			android:inputType="textPassword"/>
+
+		<Button
+			android:id="@+id/btn_login_submit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Login"/>
+
+		<Button
+			android:id="@+id/btn_login_signup"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Sign Up"/>
+
+	</LinearLayout>
+
 
 	<Button
 		android:id="@+id/AlertDialog"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:onClick="TestAlertDialog"
-		android:text="Test Alert Dialog"/>
+		android:text="Test Alert Dialog"
+		android:layout_alignParentBottom="true"/>
 
-</LinearLayout>
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestCalculator"
+		android:text="Test Calculator"
+		android:layout_above="@id/AlertDialog"/>
+
+</RelativeLayout>
