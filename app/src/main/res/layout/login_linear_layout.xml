@@ -95,5 +95,13 @@
 		android:text="Test Infomation Add"
 		android:layout_above="@id/LunarYearConvert"/>
 
+	<Button
+		android:id="@+id/ListView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestListView"
+		android:text="Test ListView"
+		android:layout_above="@id/InfomationAdd"/>
+
 
 </RelativeLayout>

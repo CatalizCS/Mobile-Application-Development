@@ -85,4 +85,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void TestInfomationAdd(View view) {
         startActivity(new android.content.Intent(this, InfomationAddActivity.class));
     }
+
+    public void TestListView(View view) {
+        startActivity(new android.content.Intent(this, ListViewActivity.class));
+    }
 }
