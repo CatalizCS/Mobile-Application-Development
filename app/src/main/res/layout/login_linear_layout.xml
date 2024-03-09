@@ -111,5 +111,13 @@
 		android:text="Test Advanced ListView"
 		android:layout_above="@id/ListView"/>
 
+	<Button
+		android:id="@+id/AdvancedAdvancedListView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="TestAdvancedAdvancedListView"
+		android:text="Test Advanced Advanced ListView"
+		android:layout_above="@id/AdvancedListView"/>
+
 
 </RelativeLayout>
