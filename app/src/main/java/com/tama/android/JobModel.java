@@ -6,11 +6,14 @@ public class JobModel {
     private String jobDate;
     private String jobTime;
 
+    private boolean isCompleted;
+
     public JobModel(String jobTitle, String jobDescription, String jobDate, String jobTime) {
         this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
         this.jobDate = jobDate;
         this.jobTime = jobTime;
+        this.isCompleted = false;
     }
 
     public String getJobTitle() {
@@ -45,8 +48,16 @@ public class JobModel {
         this.jobTime = jobTime;
     }
 
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
+
     @Override
     public String toString() {
-        return jobTitle + " - " + jobDescription + " - " + jobDate + " - " + jobTime;
+        return jobTitle + " - " + jobDescription + " - " + jobDate + " - " + jobTime + " - " + isCompleted;
     }
 }
