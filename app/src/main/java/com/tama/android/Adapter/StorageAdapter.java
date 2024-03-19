@@ -9,33 +9,34 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.tama.android.Model.ProductModel;
+import com.tama.android.Model.StorageModel;
 import com.tama.android.R;
 
 import java.util.ArrayList;
 
-public class ProductAdapter extends ArrayAdapter<ProductModel> {
+public class StorageAdapter extends ArrayAdapter<StorageModel> {
 
-    public ProductAdapter(@NonNull Context context, ArrayList<ProductModel> resource) {
+
+    public StorageAdapter(@NonNull Context context, ArrayList<StorageModel> resource) {
         super(context, 0, resource);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ProductModel productModel = getItem(position);
+        StorageModel storageModel = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.product_listview_layout, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.storage_listview_layout, parent, false);
         }
 
         TextView lvID = convertView.findViewById(R.id.lvID);
         TextView lvName = convertView.findViewById(R.id.lvName);
-        TextView lvAmount = convertView.findViewById(R.id.lvAmount);
+        TextView lvPhone = convertView.findViewById(R.id.lvPhone);
 
-        if (productModel != null) {
-            lvID.setText(String.valueOf(productModel.getId()));
-            lvName.setText(productModel.getName());
-            lvAmount.setText(String.valueOf(productModel.getAmount()));
+        if (storageModel != null) {
+            lvID.setText(String.valueOf(storageModel.getId()));
+            lvName.setText(storageModel.getName());
+            lvPhone.setText(storageModel.getPhone());
         }
 
         return convertView;

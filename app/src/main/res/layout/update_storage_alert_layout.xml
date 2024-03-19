@@ -91,7 +91,7 @@
 		android:layout_height="wrap_content"
 		android:padding="20sp">
 		<Button
-			android:id="@+id/btnAddStorage"
+			android:id="@+id/btnUpdateStorage"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="Cập nhật" />

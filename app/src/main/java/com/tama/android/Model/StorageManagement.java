@@ -47,7 +47,13 @@ public class StorageManagement {
         return null;
     }
 
+
+    public void updateStorage(int position, StorageModel storageModel) {
+        listStorage.set(position, storageModel);
+    }
     public ArrayList<StorageModel> getStorages() {
         return this.listStorage;
     }
+
+
 }

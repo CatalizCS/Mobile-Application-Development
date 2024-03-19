@@ -3,9 +3,11 @@ package com.tama.android;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.ListView;
@@ -19,11 +21,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.tama.android.Adapter.ProductAdapter;
 import com.tama.android.Model.ProductManagement;
 import com.tama.android.Model.ProductModel;
+import com.tama.android.Model.StorageModel;
 
 import java.util.ArrayList;
 
 public class ProductActivity extends AppCompatActivity {
     private ArrayList<ProductModel> listProducts;
+    private ArrayList<StorageModel> listStorage;
     private ProductAdapter productAdapter;
     private ProductManagement productManagement;
     private ListView lvProduct;
@@ -49,6 +53,13 @@ public class ProductActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         listProducts = (ArrayList<ProductModel>) intent.getSerializableExtra("listProducts");
+        listStorage = (ArrayList<StorageModel>) intent.getSerializableExtra("listStorages");
+
+        if (listStorage != null) {
+            ArrayAdapter<StorageModel> storageAdapter = new ArrayAdapter<StorageModel>(ProductActivity.this, android.R.layout.simple_spinner_item, listStorage);
+            storageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerStorage.setAdapter(storageAdapter);
+        }
 
         if (listProducts != null) {
             productManagement = new ProductManagement(listProducts);
@@ -107,7 +118,7 @@ public class ProductActivity extends AppCompatActivity {
                             productManagement.editProduct(productModel);
                             productAdapter.notifyDataSetChanged();
 
-                            alertDialog.cancel();
+                            alertDialog.dismiss();
 
                             Toast.makeText(ProductActivity.this, "Cập nhật sản phẩm thành công", Toast.LENGTH_SHORT).show();
                         }
@@ -142,18 +153,9 @@ public class ProductActivity extends AppCompatActivity {
                     return;
                 }
 
-                String selectedStorage = spinnerStorage.getSelectedItem().toString();
-
-                if (selectedStorage.equals("Chọn kho")) {
-                    Toast.makeText(ProductActivity.this, "Chưa chọn kho hoặc kho đang không tồn tại", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 int storageId = 0;
-                for (ProductModel productModel : listProducts) {
-                    if (productModel.getName().equals(selectedStorage)) {
-                        storageId = productModel.getId();
-                    }
+                if (spinnerStorage.getSelectedItem() != null) {
+                    storageId = ((StorageModel) spinnerStorage.getSelectedItem()).getId();
                 }
 
                 if (storageId == 0) {

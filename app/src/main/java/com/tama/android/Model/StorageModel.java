@@ -48,6 +48,6 @@ public class StorageModel implements Serializable {
 
     @Override
     public String toString() {
-        return "[" + getName() + " - " + getAddress() + " - " + getPhone() + "]";
+        return "[" + getId() + " - "  + getName() + " - " + getAddress() + " - " + getPhone() + "]";
     }
 }
